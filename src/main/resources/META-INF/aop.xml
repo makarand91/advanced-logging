@@ -1,0 +1,11 @@
+<aspectj>
+    <aspects>
+        <aspect name="com.serverless.logging.advice.ProcessFlowAdvice"/>
+        <aspect name="com.serverless.logging.advice.TaskAdvice"/>
+        <weaver options="-verbose -showWeaveInfo">
+            <include within="com.serverless.logging.main.*"/>
+
+            <include within="com.serverless.logging.advice.*"/>
+        </weaver>
+    </aspects>
+</aspectj>
